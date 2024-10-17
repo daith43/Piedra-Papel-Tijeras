@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Piedra, Papel, Tijeras</title>
+</head>
+<body >
+    <div class="container">
+        <h1>Piedra, Papel, Tijeras</h1>
+        <br>
+
+        <div class="manos">
+            <div class="mano izquierda">
+                <img src="icons/tijera.png" alt="">
+            </div>
+            <div class="mano derecha">
+                <img src="icons/tijera.png" alt="">
+            </div>
+        </div>
+
+        <div class="marcador">
+            <p class="ia">0</p>
+            <p>-</p>
+            <p class="player">0</p>
+        </div>
+        <div class="nombre">
+            <div class="uno">IA</div>
+            <div class="dos">-</div>
+            <div class="tres">Tu</div>
+        </div>
+
+        <div class="reset">
+            <input type="reset" id="reset" value="reset">
+        </div>
+
+       <div class="opciones">
+        <button class="opcion piedra">
+            <p>​</p>
+        </button>
+        <button class="opcion papel">
+            <p></p>
+        </button>
+        <button class="opcion tijeras">
+            <p>​</p>
+        </button>
+       </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

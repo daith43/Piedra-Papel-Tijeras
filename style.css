@@ -1,0 +1,242 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
+    font-family:  Roboto;
+    overflow: hidden;
+}
+
+body{
+    /*background: -webkit-linear-gradient(to right, #F2C94C, #F2994A); 
+    background: linear-gradient(to right, #F2C94C, #F2994A);*/
+
+    background-color: #fff;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    height: fit-content;
+
+}
+
+
+
+.container{
+    width: 55vw;
+    max-width: 700px;
+    height: 100%;
+    max-height: fit-content;
+    text-align: center;
+    color: #fff;
+    border: 4px solid #000;
+    border-radius: 12px;
+    padding: 50px;
+}
+
+h1{
+  color: black;
+   width: fit-content;
+   font-size: calc(1vw + 22px);
+   /*text-shadow: 1px 1px 10px rgba(0, 0, 0, .9);*/
+   margin-bottom: 60px;
+
+}
+
+/* Manos */
+
+
+.manos{
+  display: flex;
+  max-width: 650px;
+  border: 0px solid red;
+}
+
+.mano{
+  width: 50%;
+  height: 200px;
+  font-size: calc(1vw + 108px);
+}
+
+.izquierda{
+  max-width: fit-content;
+  height: fit-content;
+  transform: rotateY(0deg);
+  rotate: 80deg;
+  border: 0px solid red;
+  /*animation: floatL 5s alternate-reverse infinite;*/
+}
+
+.derecha{
+  max-width: fit-content;
+  height: fit-content;
+  border: 0px solid red;
+  rotate: 100deg;
+
+  transform: rotateX(180deg);
+  /*animation: floatR 5s alternate-reverse infinite;*/
+}
+
+.derecha img, .izquierda img{
+  width: 80px;
+}
+
+@keyframes floatL {
+  0%{
+    rotate: -10deg;
+  }
+  100%{
+    rotate: 70deg;
+  }
+}
+
+@keyframes floatR {
+  0%{
+    rotate: 10deg;
+  }
+  100%{
+    rotate: -70deg;
+  }
+}
+
+
+/* Marcador */
+
+.marcador{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: calc(1vw + 42px);
+  color: black;
+}
+
+.nombre{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: calc(1vw + 14px);
+  color: black;
+}
+
+.dos{
+  visibility: hidden;
+}
+
+
+/* Reset */
+
+.reset input{
+  cursor: pointer;
+  padding: 3px  15px;
+  border-style: solid;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, .9);
+  font-size: 14px;
+}
+
+
+/* Opciones */
+.opciones{
+  margin-top: 50px;
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.opcion{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10vw;
+  max-width: 100px;
+  height: 10vw;
+  max-height: 100px;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 50%;
+
+  font-size: calc(1vw + 20px);
+}
+
+.piedra, 
+.papel,
+.tijeras{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+}
+
+.piedra{
+  background-image: url(icons/piedra.png);
+}
+
+.papel{
+  background-image: url(icons/mano.png);
+}
+
+.tijeras{
+  background-image: url(icons/tijera.png);
+}
+
+button{
+  cursor: pointer;
+}
+
+button:hover{
+  box-shadow: inset 1px 1px 10px rgba(0, 0, 0, .6);
+  background-color: #ececec;
+}
+
+button:active{
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .6);
+
+}
+
+
+@media (max-width: 700px) {
+
+  .container{
+    width: 80%;
+  }
+
+  .manos{
+    gap: 3.5rem;
+  }
+
+  .mano{
+    font-size: calc(1vw + 82px);
+  }
+
+  .reset input{
+    margin-top: 25px;
+  }
+
+
+  .opciones{
+    margin-top: 25px;
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .opcion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+    border: none;
+  }
+  
+  button{
+    cursor: pointer;
+  }
+
+}
